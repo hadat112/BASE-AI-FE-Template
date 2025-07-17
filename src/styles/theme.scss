@@ -1,0 +1,334 @@
+:root {
+  /* Semantic Colors */
+  /* Primary */
+  --semantic-primary-300: #79b6fd;
+  --semantic-primary-400: #4d9efd;
+  --semantic-primary-500: #2086fc;
+  --semantic-primary-600: #1a6bca;
+  --semantic-primary-700: #135097;
+  --semantic-primary-500\:5: #2086fc0d;
+  --semantic-primary-500\:10: #2086fc1a;
+  --semantic-primary-500\:20: #2086fc33;
+
+  /* Danger */
+  --semantic-danger-300: #ff7a7a;
+  --semantic-danger-400: #ea4b84;
+  --semantic-danger-500: #e93d7b;
+  --semantic-danger-600: #d4356f;
+  --semantic-danger-700: #bc2e63;
+  --semantic-danger-500\:10: #e93d7b1a;
+  --semantic-danger-500\:20: #e93d7b33;
+
+  /* Success */
+  --semantic-success-300: #68d391;
+  --semantic-success-400: #5bd197;
+  --semantic-success-500: #16c284;
+  --semantic-success-600: #15af77;
+  --semantic-success-700: #139b6b;
+  --semantic-success-500\:10: #16c2841a;
+  --semantic-success-500\:20: #16c28433;
+
+  /* Warning */
+  --semantic-warning-300: #fdba74;
+  --semantic-warning-400: #fb923c;
+  --semantic-warning-500: #f97316;
+  --semantic-warning-600: #ea580c;
+  --semantic-warning-700: #c2410c;
+  --semantic-warning-500\:10: #f973161a;
+  --semantic-warning-500\:20: #f9731633;
+
+  /* Info */
+  --semantic-info-300: #63b3ed;
+  --semantic-info-400: #60a5fa;
+  --semantic-info-500: #3b82f6;
+  --semantic-info-600: #2563eb;
+  --semantic-info-700: #1d4ed8;
+  --semantic-info-500\:10: #3b82f61a;
+  --semantic-info-500\:20: #3b82f633;
+
+  /* Neutral colors */
+  --neutral-50: #f8f8f9;
+  --neutral-100: #efeff1;
+  --neutral-200: #d6d6db;
+  --neutral-300: #b4b4ba;
+  --neutral-400: #97979e;
+  --neutral-500: #7a7a83;
+  --neutral-600: #5d5d66;
+  --neutral-700: #2e2e34;
+  --neutral-800: #252527;
+  --neutral-900: #1b1b1c;
+  --neutral-950: #0a0a0b;
+  --neutral-500\:10: #7a7a831a;
+  --neutral-500\:20: #7a7a8333;
+
+  /* Social Colors */
+  /* Brand */
+  --social-brand-facebook: #1877f2;
+  --social-brand-twitter: #000000;
+  --social-brand-linkedin: #0a66c2;
+  --social-brand-instagram: #e4405f;
+  --social-brand-youtube: #ff0000;
+  --social-brand-tiktok-pink: #ee1d52;
+  --social-brand-discord: #5865f2;
+  --social-brand-telegram: #229ed9;
+  --social-brand-reddit: #ff4500;
+  --social-brand-snapchat: #fffc00;
+  --social-brand-whatsapp: #25d366;
+  --social-brand-pinterest: #bd081c;
+  --social-brand-twitch: #9146ff;
+  --social-brand-medium: #12100e;
+
+  /* Social Overlay */
+  --social-overlay-facebook: #1877f2;
+  --social-overlay-twitter: #000000;
+  --social-overlay-linkedin: #0a66c2;
+  --social-overlay-instagram: #e4405f;
+  --social-overlay-youtube: #ff0000;
+  --social-overlay-tiktok-pink: #ee1d52;
+  --social-overlay-discord: #5865f2;
+  --social-overlay-telegram: #229ed9;
+  --social-overlay-reddit: #ff4500;
+  --social-overlay-snapchat: #fffc00;
+  --social-overlay-whatsapp: #25d366;
+  --social-overlay-pinterest: #bd081c;
+  --social-overlay-twitch: #9146ff;
+  --social-overlay-medium: #12100e;
+
+  /* Overlay Colors */
+  /* Light */
+  --overlay-light-100: #ffffff;
+  --overlay-light-90: #ffffffe6;
+  --overlay-light-80: #ffffffcc;
+  --overlay-light-70: #ffffffb3;
+  --overlay-light-60: #ffffff99;
+  --overlay-light-50: #ffffff80;
+  --overlay-light-40: #ffffff66;
+  --overlay-light-30: #ffffff4d;
+  --overlay-light-20: #ffffff33;
+  --overlay-light-10: #ffffff1a;
+  --overlay-light-5: #ffffff0d;
+
+  /* Dark */
+  --overlay-dark-100: #000000;
+  --overlay-dark-90: #000000e6;
+  --overlay-dark-80: #000000cc;
+  --overlay-dark-70: #000000b3;
+  --overlay-dark-60: #00000099;
+  --overlay-dark-50: #00000080;
+  --overlay-dark-40: #00000066;
+  --overlay-dark-30: #0000004d;
+  --overlay-dark-20: #00000033;
+  --overlay-dark-10: #0000001a;
+  --overlay-dark-5: #0000000d;
+
+  /* Custom Colors */
+  /* Lime */
+  --custom-lime-400: #a3e635;
+  --custom-lime-500: #84cc16;
+  --custom-lime-600: #65a30d;
+  --custom-lime-500\:10: #84cc161a;
+  --custom-lime-500\:20: #84cc1633;
+
+  /* Teal */
+  --custom-teal-200: #8dffe9;
+  --custom-teal-400: #2dd4bf;
+  --custom-teal-500: #14b8a6;
+  --custom-teal-600: #0d9488;
+  --custom-teal-500\:10: #14b8a61a;
+  --custom-teal-500\:20: #14b8a633;
+
+  /* Pink */
+  --custom-pink-400: #f472b6;
+  --custom-pink-500: #ec4899;
+  --custom-pink-600: #db2777;
+  --custom-pink-500\:5: #ec48990d;
+  --custom-pink-500\:10: #ec48991a;
+  --custom-pink-500\:20: #ec489933;
+
+  /* Indigo */
+  --custom-indigo-400: #818cf8;
+  --custom-indigo-500: #6366f1;
+  --custom-indigo-600: #7c3aed;
+  --custom-indigo-500\:5: #6366f10d;
+  --custom-indigo-500\:10: #6366f11a;
+  --custom-indigo-500\:20: #6366f133;
+
+  /* Yellow */
+  --custom-yellow-400: #facc15;
+  --custom-yellow-500: #eab308;
+  --custom-yellow-600: #ca8a04;
+  --custom-yellow-500\:5: #eab3080d;
+  --custom-yellow-500\:10: #eab3081a;
+  --custom-yellow-500\:20: #eab30833;
+
+  /* Custom Info */
+  --custom-info-400: #f472b6;
+  --custom-info-500: #ec4899;
+  --custom-info-600: #db2777;
+  --custom-info-500\:10: #ec48991a;
+  --custom-info-500\:20: #ec489933;
+
+  /* Basic colors for backward compatibility */
+  --blue: #2086fc;
+  --cyan: #22d3ee;
+  --green: #16c284;
+  --orange: #f97316;
+  --red: #e93d7b;
+}
+
+[data-theme="light"] {
+  /* Background colors */
+  --bg-neutral-01: var(--neutral-50);
+  --bg-neutral-02: var(--neutral-100);
+  --bg-neutral-03: var(--neutral-200);
+  --bg-neutral-04: var(--neutral-300);
+  --bg-neutral-inverse: var(--neutral-950);
+
+  --bg-primary: var(--semantic-primary-500);
+  --bg-secondary: var(--neutral-50);
+  --bg-success: var(--semantic-success-500);
+  --bg-danger: var(--semantic-danger-500);
+  --bg-warning: var(--semantic-warning-500);
+  --bg-info: var(--semantic-info-500);
+  --bg-overlay: var(--overlay-dark-50);
+
+  /* Border colors */
+  --border-neutral-01: var(--neutral-100);
+  --border-neutral-02: var(--neutral-200);
+  --border-neutral-03: var(--neutral-300);
+  --border-neutral-04: var(--neutral-400);
+  --border-neutral-inverse: var(--neutral-800);
+
+  --border-primary: var(--semantic-primary-400);
+  --border-secondary: var(--neutral-400);
+  --border-success: var(--semantic-success-400);
+  --border-danger: var(--semantic-danger-400);
+  --border-warning: var(--semantic-warning-400);
+  --border-info: var(--semantic-info-400);
+  --border-overlay: var(--overlay-dark-10);
+
+  /* Text colors */
+  --text-neutral-primary: var(--neutral-950);
+  --text-neutral-secondary: var(--neutral-600);
+  --text-neutral-tertiary: var(--neutral-400);
+  --text-neutral-on-color: var(--neutral-50);
+  --text-neutral-inverse: var(--neutral-50);
+
+  --text-primary: var(--semantic-primary-500);
+  --text-primary-lightness: var(--semantic-primary-300);
+  --text-primary-darkness: var(--semantic-primary-700);
+
+  --text-success: var(--semantic-success-500);
+  --text-success-lightness: var(--semantic-success-300);
+  --text-success-darkness: var(--semantic-success-700);
+
+  --text-danger: var(--semantic-danger-500);
+  --text-danger-lightness: var(--semantic-danger-300);
+  --text-danger-darkness: var(--semantic-danger-700);
+
+  --text-warning: var(--semantic-warning-500);
+  --text-warning-lightness: var(--semantic-warning-300);
+  --text-warning-darkness: var(--semantic-warning-700);
+
+  --text-info: var(--semantic-info-500);
+  --text-info-lightness: var(--semantic-info-300);
+  --text-info-darkness: var(--semantic-info-700);
+
+  --text-overlay: var(--overlay-light-80);
+  --text-yellow: var(--custom-yellow-400);
+  --text-lime: var(--custom-lime-400);
+  --text-teal: var(--custom-teal-400);
+  --text-indigo: var(--custom-indigo-400);
+  --text-pink: var(--custom-pink-400);
+}
+
+[data-theme="dark"] {
+  /* Neutral colors - dark mode */
+  --neutral-50: #0a0a0b;
+  --neutral-100: #252527;
+  --neutral-200: #2e2e34;
+  --neutral-300: #5d5d66;
+  --neutral-400: #7a7a83;
+  --neutral-500: #97979e;
+  --neutral-600: #b4b4ba;
+  --neutral-700: #d6d6db;
+  --neutral-800: #efeff1;
+  --neutral-900: #ffffff;
+  --neutral-950: #ffffff;
+
+  /* Background colors - dark mode */
+  --bg-neutral-01: var(--neutral-50);
+  --bg-neutral-02: var(--neutral-100);
+  --bg-neutral-03: var(--neutral-200);
+  --bg-neutral-04: var(--neutral-300);
+  --bg-neutral-inverse: var(--neutral-900);
+
+  --bg-primary: var(--semantic-primary-600);
+  --bg-secondary: var(--neutral-100);
+  --bg-success: var(--semantic-success-600);
+  --bg-danger: var(--semantic-danger-600);
+  --bg-warning: var(--semantic-warning-600);
+  --bg-info: var(--semantic-info-600);
+  --bg-overlay: var(--overlay-dark-50);
+
+  /* Text colors - dark mode */
+  --text-neutral-primary: var(--neutral-900);
+  --text-neutral-secondary: var(--neutral-700);
+  --text-neutral-tertiary: var(--neutral-600);
+  --text-neutral-on-color: var(--neutral-900);
+  --text-neutral-inverse: var(--neutral-50);
+
+  --text-primary: var(--semantic-primary-400);
+  --text-primary-lightness: var(--semantic-primary-300);
+  --text-primary-darkness: var(--semantic-primary-600);
+
+  --text-success: var(--semantic-success-400);
+  --text-success-lightness: var(--semantic-success-300);
+  --text-success-darkness: var(--semantic-success-600);
+
+  --text-danger: var(--semantic-danger-400);
+  --text-danger-lightness: var(--semantic-danger-300);
+  --text-danger-darkness: var(--semantic-danger-600);
+
+  --text-warning: var(--semantic-warning-400);
+  --text-warning-lightness: var(--semantic-warning-300);
+  --text-warning-darkness: var(--semantic-warning-600);
+
+  --text-info: var(--semantic-info-400);
+  --text-info-lightness: var(--semantic-info-300);
+  --text-info-darkness: var(--semantic-info-600);
+
+  /* Border colors - dark mode */
+  --border-neutral-01: var(--neutral-100);
+  --border-neutral-02: var(--neutral-200);
+  --border-neutral-03: var(--neutral-300);
+  --border-neutral-04: var(--neutral-400);
+  --border-neutral-inverse: var(--neutral-800);
+
+  --border-primary: var(--semantic-primary-600);
+  --border-secondary: var(--neutral-400);
+  --border-success: var(--semantic-success-600);
+  --border-danger: var(--semantic-danger-600);
+  --border-warning: var(--semantic-warning-600);
+  --border-info: var(--semantic-info-600);
+  --border-overlay: var(--overlay-light-10);
+
+  --text-overlay: var(--overlay-dark-80);
+  --text-yellow: var(--custom-yellow-500);
+  --text-lime: var(--custom-lime-500);
+  --text-teal: var(--custom-teal-500);
+  --text-indigo: var(--custom-indigo-500);
+  --text-pink: var(--custom-pink-500);
+}
+
+// Add transition effect to body and elements
+// But only after theme is loaded to prevent initial transition flash
+// .theme-loaded {
+//   &,
+//   * {
+//     transition:
+//       background-color 0.2s ease,
+//       color 0.2s ease,
+//       border-color 0.2s ease;
+//   }
+// }

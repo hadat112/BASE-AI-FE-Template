@@ -1,0 +1,521 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["[data-theme='dark']"],
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/features/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Neutral colors
+        neutral: {
+          50: "var(--neutral-50)",
+          100: "var(--neutral-100)",
+          200: "var(--neutral-200)",
+          300: "var(--neutral-300)",
+          400: "var(--neutral-400)",
+          500: "var(--neutral-500)",
+          600: "var(--neutral-600)",
+          700: "var(--neutral-700)",
+          800: "var(--neutral-800)",
+          900: "var(--neutral-900)",
+          950: "var(--neutral-950)",
+          "500:10": "var(--neutral-500\\:10)",
+          "500:20": "var(--neutral-500\\:20)",
+        },
+
+        // Semantic colors
+        primary: {
+          300: "var(--semantic-primary-300)",
+          400: "var(--semantic-primary-400)",
+          500: "var(--semantic-primary-500)",
+          600: "var(--semantic-primary-600)",
+          700: "var(--semantic-primary-700)",
+          DEFAULT: "var(--semantic-primary-500)",
+          "500:5": "var(--semantic-primary-500\\:5)",
+          "500:10": "var(--semantic-primary-500\\:10)",
+          "500:20": "var(--semantic-primary-500\\:20)",
+        },
+
+        // Success colors
+        success: {
+          300: "var(--semantic-success-300)",
+          400: "var(--semantic-success-400)",
+          500: "var(--semantic-success-500)",
+          600: "var(--semantic-success-600)",
+          700: "var(--semantic-success-700)",
+          DEFAULT: "var(--semantic-success-500)",
+          "500:10": "var(--semantic-success-500\\:10)",
+          "500:20": "var(--semantic-success-500\\:20)",
+        },
+
+        // Danger colors
+        danger: {
+          300: "var(--semantic-danger-300)",
+          400: "var(--semantic-danger-400)",
+          500: "var(--semantic-danger-500)",
+          600: "var(--semantic-danger-600)",
+          700: "var(--semantic-danger-700)",
+          DEFAULT: "var(--semantic-danger-500)",
+          "500:10": "var(--semantic-danger-500\\:10)",
+          "500:20": "var(--semantic-danger-500\\:20)",
+        },
+
+        // Warning colors
+        warning: {
+          300: "var(--semantic-warning-300)",
+          400: "var(--semantic-warning-400)",
+          500: "var(--semantic-warning-500)",
+          600: "var(--semantic-warning-600)",
+          700: "var(--semantic-warning-700)",
+          DEFAULT: "var(--semantic-warning-500)",
+          "500:10": "var(--semantic-warning-500\\:10)",
+          "500:20": "var(--semantic-warning-500\\:20)",
+        },
+
+        // Info colors
+        info: {
+          300: "var(--semantic-info-300)",
+          400: "var(--semantic-info-400)",
+          500: "var(--semantic-info-500)",
+          600: "var(--semantic-info-600)",
+          700: "var(--semantic-info-700)",
+          DEFAULT: "var(--semantic-info-500)",
+          "500:10": "var(--semantic-info-500\\:10)",
+          "500:20": "var(--semantic-info-500\\:20)",
+        },
+
+        // Social colors
+        social: {
+          facebook: "var(--social-brand-facebook)",
+          twitter: "var(--social-brand-twitter)",
+          linkedin: "var(--social-brand-linkedin)",
+          instagram: "var(--social-brand-instagram)",
+          youtube: "var(--social-brand-youtube)",
+          "tiktok-pink": "var(--social-brand-tiktok-pink)",
+          discord: "var(--social-brand-discord)",
+          telegram: "var(--social-brand-telegram)",
+          reddit: "var(--social-brand-reddit)",
+          snapchat: "var(--social-brand-snapchat)",
+          whatsapp: "var(--social-brand-whatsapp)",
+          pinterest: "var(--social-brand-pinterest)",
+          twitch: "var(--social-brand-twitch)",
+          medium: "var(--social-brand-medium)",
+        },
+
+        // Overlay colors
+        overlay: {
+          light: {
+            100: "var(--overlay-light-100)",
+            90: "var(--overlay-light-90)",
+            80: "var(--overlay-light-80)",
+            70: "var(--overlay-light-70)",
+            60: "var(--overlay-light-60)",
+            50: "var(--overlay-light-50)",
+            40: "var(--overlay-light-40)",
+            30: "var(--overlay-light-30)",
+            20: "var(--overlay-light-20)",
+            10: "var(--overlay-light-10)",
+            5: "var(--overlay-light-5)",
+          },
+          dark: {
+            100: "var(--overlay-dark-100)",
+            90: "var(--overlay-dark-90)",
+            80: "var(--overlay-dark-80)",
+            70: "var(--overlay-dark-70)",
+            60: "var(--overlay-dark-60)",
+            50: "var(--overlay-dark-50)",
+            40: "var(--overlay-dark-40)",
+            30: "var(--overlay-dark-30)",
+            20: "var(--overlay-dark-20)",
+            10: "var(--overlay-dark-10)",
+            5: "var(--overlay-dark-5)",
+          },
+        },
+
+        // Custom colors
+        lime: {
+          400: "var(--custom-lime-400)",
+          500: "var(--custom-lime-500)",
+          600: "var(--custom-lime-600)",
+          DEFAULT: "var(--custom-lime-500)",
+          "500:10": "var(--custom-lime-500\\:10)",
+          "500:20": "var(--custom-lime-500\\:20)",
+        },
+
+        teal: {
+          200: "var(--custom-teal-200)",
+          400: "var(--custom-teal-400)",
+          500: "var(--custom-teal-500)",
+          600: "var(--custom-teal-600)",
+          DEFAULT: "var(--custom-teal-500)",
+          "500:10": "var(--custom-teal-500\\:10)",
+          "500:20": "var(--custom-teal-500\\:20)",
+        },
+
+        indigo: {
+          400: "var(--custom-indigo-400)",
+          500: "var(--custom-indigo-500)",
+          600: "var(--custom-indigo-600)",
+          DEFAULT: "var(--custom-indigo-500)",
+          "500:5": "var(--custom-indigo-500\\:5)",
+          "500:10": "var(--custom-indigo-500\\:10)",
+          "500:20": "var(--custom-indigo-500\\:20)",
+        },
+
+        pink: {
+          400: "var(--custom-pink-400)",
+          500: "var(--custom-pink-500)",
+          600: "var(--custom-pink-600)",
+          DEFAULT: "var(--custom-pink-500)",
+          "500:5": "var(--custom-pink-500\\:5)",
+          "500:10": "var(--custom-pink-500\\:10)",
+          "500:20": "var(--custom-pink-500\\:20)",
+        },
+
+        yellow: {
+          400: "var(--custom-yellow-400)",
+          500: "var(--custom-yellow-500)",
+          600: "var(--custom-yellow-600)",
+          DEFAULT: "var(--custom-yellow-500)",
+          "500:5": "var(--custom-yellow-500\\:5)",
+          "500:10": "var(--custom-yellow-500\\:10)",
+          "500:20": "var(--custom-yellow-500\\:20)",
+        },
+
+        // Basic colors for backward compatibility
+        blue: "var(--blue)",
+        cyan: "var(--cyan)",
+        green: "var(--green)",
+        orange: "var(--orange)",
+        red: "var(--red)",
+      },
+      backgroundColor: {
+        neutral: {
+          "01": "var(--bg-neutral-01)",
+          "02": "var(--bg-neutral-02)",
+          "03": "var(--bg-neutral-03)",
+          "04": "var(--bg-neutral-04)",
+          inverse: "var(--bg-neutral-inverse)",
+        },
+        primary: {
+          DEFAULT: "var(--semantic-primary-500)",
+          "muted-20": "var(--semantic-primary-500\\:20)",
+          "muted-10": "var(--semantic-primary-500\\:10)",
+          "muted-5": "var(--semantic-primary-500\\:5)",
+        },
+        secondary: {
+          DEFAULT: "var(--bg-secondary)",
+          "muted-20": "var(--neutral-500\\:20)",
+          "muted-10": "var(--neutral-500\\:10)",
+        },
+        success: {
+          DEFAULT: "var(--semantic-success-500)",
+          "muted-20": "var(--semantic-success-500\\:20)",
+          "muted-10": "var(--semantic-success-500\\:10)",
+        },
+        danger: {
+          DEFAULT: "var(--semantic-danger-500)",
+          "muted-20": "var(--semantic-danger-500\\:20)",
+          "muted-10": "var(--semantic-danger-500\\:10)",
+        },
+        warning: {
+          DEFAULT: "var(--semantic-warning-500)",
+          "muted-20": "var(--semantic-warning-500\\:20)",
+          "muted-10": "var(--semantic-warning-500\\:10)",
+        },
+        info: {
+          DEFAULT: "var(--semantic-info-500)",
+          "muted-20": "var(--semantic-info-500\\:20)",
+          "muted-10": "var(--semantic-info-500\\:10)",
+        },
+        overlay: {
+          light: {
+            100: "var(--overlay-light-100)",
+            90: "var(--overlay-light-90)",
+            80: "var(--overlay-light-80)",
+            70: "var(--overlay-light-70)",
+            60: "var(--overlay-light-60)",
+            50: "var(--overlay-light-50)",
+            40: "var(--overlay-light-40)",
+            30: "var(--overlay-light-30)",
+            20: "var(--overlay-light-20)",
+            10: "var(--overlay-light-10)",
+            5: "var(--overlay-light-5)",
+          },
+          dark: {
+            100: "var(--overlay-dark-100)",
+            90: "var(--overlay-dark-90)",
+            80: "var(--overlay-dark-80)",
+            70: "var(--overlay-dark-70)",
+            60: "var(--overlay-dark-60)",
+            50: "var(--overlay-dark-50)",
+            40: "var(--overlay-dark-40)",
+            30: "var(--overlay-dark-30)",
+            20: "var(--overlay-dark-20)",
+            10: "var(--overlay-dark-10)",
+            5: "var(--overlay-dark-5)",
+          },
+        },
+        yellow: {
+          DEFAULT: "var(--custom-yellow-500)",
+          muted: "var(--custom-yellow-500\\:20)",
+          5: "var(--custom-yellow-500\\:5)",
+        },
+        lime: {
+          DEFAULT: "var(--custom-lime-500)",
+          muted: "var(--custom-lime-500\\:20)",
+        },
+        teal: {
+          DEFAULT: "var(--custom-teal-500)",
+          muted: "var(--custom-teal-500\\:20)",
+        },
+        indigo: {
+          DEFAULT: "var(--custom-indigo-500)",
+          muted: "var(--custom-indigo-500\\:20)",
+          5: "var(--custom-indigo-500\\:5)",
+        },
+        pink: {
+          DEFAULT: "var(--custom-pink-500)",
+          muted: "var(--custom-pink-500\\:20)",
+          5: "var(--custom-pink-500\\:5)",
+        },
+      },
+
+      borderColor: {
+        neutral: {
+          "01": "var(--border-neutral-01)",
+          "02": "var(--border-neutral-02)",
+          "03": "var(--border-neutral-03)",
+          "04": "var(--border-neutral-04)",
+          inverse: "var(--border-neutral-inverse)",
+        },
+        primary: {
+          DEFAULT: "var(--semantic-primary-400)",
+          muted: "var(--semantic-primary-500\\:20)",
+        },
+        secondary: {
+          DEFAULT: "var(--neutral-400)",
+          muted: "var(--neutral-500\\:20)",
+        },
+        success: {
+          DEFAULT: "var(--semantic-success-400)",
+          muted: "var(--semantic-success-500\\:20)",
+        },
+        danger: {
+          DEFAULT: "var(--semantic-danger-400)",
+          muted: "var(--semantic-danger-500\\:20)",
+        },
+        warning: {
+          DEFAULT: "var(--semantic-warning-400)",
+          muted: "var(--semantic-warning-500\\:20)",
+        },
+        info: {
+          DEFAULT: "var(--semantic-info-400)",
+          muted: "var(--semantic-info-500\\:20)",
+        },
+        yellow: {
+          DEFAULT: "var(--custom-yellow-400)",
+          muted: "var(--custom-yellow-500\\:20)",
+          10: "var(--custom-yellow-500\\:10)",
+        },
+        lime: {
+          DEFAULT: "var(--custom-lime-400)",
+          muted: "var(--custom-lime-500\\:20)",
+          10: "var(--custom-lime-500\\:10)",
+        },
+        teal: {
+          DEFAULT: "var(--custom-teal-400)",
+          muted: "var(--custom-teal-500\\:20)",
+          10: "var(--custom-teal-500\\:10)",
+        },
+        indigo: {
+          DEFAULT: "var(--custom-indigo-400)",
+          muted: "var(--custom-indigo-500\\:20)",
+          10: "var(--custom-indigo-500\\:10)",
+        },
+        pink: {
+          DEFAULT: "var(--custom-pink-400)",
+          muted: "var(--custom-pink-500\\:20)",
+          10: "var(--custom-pink-500\\:10)",
+        },
+        overlay: {
+          DEFAULT: "var(--overlay-dark-10)",
+          light: "var(--overlay-light-10)",
+          dark: "var(--overlay-dark-10)",
+        },
+      },
+
+      textColor: {
+        neutral: {
+          primary: "var(--text-neutral-primary)",
+          secondary: "var(--text-neutral-secondary)",
+          tertiary: "var(--text-neutral-tertiary)",
+          "on-color": "var(--text-neutral-on-color)",
+          inverse: "var(--text-neutral-inverse)",
+        },
+        primary: {
+          DEFAULT: "var(--semantic-primary-500)",
+          lightness: "var(--semantic-primary-300)",
+          darkness: "var(--semantic-primary-700)",
+        },
+        success: {
+          DEFAULT: "var(--semantic-success-500)",
+          lightness: "var(--semantic-success-300)",
+          darkness: "var(--semantic-success-700)",
+        },
+        danger: {
+          DEFAULT: "var(--semantic-danger-500)",
+          lightness: "var(--semantic-danger-300)",
+          darkness: "var(--semantic-danger-700)",
+        },
+        warning: {
+          DEFAULT: "var(--semantic-warning-500)",
+          lightness: "var(--semantic-warning-300)",
+          darkness: "var(--semantic-warning-700)",
+        },
+        info: {
+          DEFAULT: "var(--semantic-info-500)",
+          lightness: "var(--semantic-info-300)",
+          darkness: "var(--semantic-info-700)",
+        },
+        overlay: {
+          light: "var(--overlay-light-80)",
+          dark: "var(--overlay-dark-80)",
+        },
+        yellow: "var(--custom-yellow-400)",
+        lime: "var(--custom-lime-400)",
+        teal: "var(--custom-teal-400)",
+        indigo: "var(--custom-indigo-400)",
+        pink: "var(--custom-pink-400)",
+      },
+      fontFamily: {
+        sans: ["Funnel Sans", "sans-serif"],
+      },
+      fontSize: {
+        "display-lg": [
+          "48px",
+          {
+            lineHeight: "56px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "display-md": [
+          "36px",
+          {
+            lineHeight: "44px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "heading-lg": [
+          "28px",
+          {
+            lineHeight: "36px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "heading-md": [
+          "24px",
+          {
+            lineHeight: "32px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "heading-sm": [
+          "20px",
+          {
+            lineHeight: "28px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+
+        "label-lg": [
+          "18px",
+          {
+            lineHeight: "28px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "label-md": [
+          "16px",
+          {
+            lineHeight: "24px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "label-sm": [
+          "14px",
+          {
+            lineHeight: "20px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "label-xs": [
+          "12px",
+          {
+            lineHeight: "16px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+          },
+        ],
+        "label-2xs": [
+          "10px",
+          {
+            lineHeight: "12px",
+            fontWeight: "600",
+            letterSpacing: "0px",
+            textTransform: "uppercase",
+          },
+        ],
+
+        "body-lg": [
+          "18px",
+          {
+            lineHeight: "28px",
+            fontWeight: "400",
+            letterSpacing: "0px",
+          },
+        ],
+        "body-md": [
+          "16px",
+          {
+            lineHeight: "24px",
+            fontWeight: "400",
+            letterSpacing: "0px",
+          },
+        ],
+        "body-sm": [
+          "14px",
+          {
+            lineHeight: "20px",
+            fontWeight: "400",
+            letterSpacing: "0px",
+          },
+        ],
+        "body-xs": [
+          "12px",
+          {
+            lineHeight: "16px",
+            fontWeight: "400",
+            letterSpacing: "0px",
+          },
+        ],
+      },
+    },
+  },
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
+};

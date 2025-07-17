@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  :root {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  html {
+    font-family: var(--font-funnel-sans, var(--font-family-sans));
+  }
+
+  body {
+    color: var(--text-neutral-primary);
+    background-color: var(--bg-neutral-01);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  * {
+    border-color: var(--border-neutral-02);
+  }
+}
+
+@layer utilities {
+  /* Remove number input arrows for Chrome, Safari, Edge */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Remove number input arrows for Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .animate-reverse {
+    animation-direction: reverse;
+  }
+
+  /* Custom scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--neutral-50);
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--neutral-50);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--neutral-300);
+    border-radius: 10px;
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--neutral-600);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--neutral-400);
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--neutral-500);
+  }
+
+  * {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--neutral-300) var(--neutral-50); /* Firefox */
+  }
+
+  [data-theme="dark"] * {
+    scrollbar-color: var(--neutral-600) var(--neutral-50); /* Firefox */
+  }
+}
+
+@layer components {
+  /* Toast Progress Bar Styles */
+  .toast-with-progress {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toast-with-progress::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--semantic-primary-500);
+    animation: toast-progress 3s linear forwards;
+    z-index: 1;
+  }
+
+  .toast-success::after {
+    background: var(--semantic-success-500);
+  }
+
+  .toast-error::after {
+    background: var(--semantic-danger-500);
+  }
+
+  .toast-warning::after {
+    background: var(--semantic-warning-500);
+  }
+
+  .toast-info::after {
+    background: var(--semantic-info-500);
+  }
+
+  .toast-loading::after {
+    background: var(--semantic-primary-500);
+  }
+
+  @keyframes toast-progress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
