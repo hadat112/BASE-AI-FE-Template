@@ -1,0 +1,42 @@
+---
+name: gen-figma
+description: "Generate a React component from a single Figma design link using Figma MCP. Use when asked to build a component from Figma, convert Figma to code, or implement a design."
+metadata:
+  author: lab3
+  version: "1.0.0"
+  argument-hint: <figma-link>
+---
+
+# Figma-to-Component Task
+
+Generate a React component based on a Figma design link using Figma MCP.
+
+## Development Requirements
+
+### Styling
+- Use **color variables** (`background`, `border`, `text`, etc.) defined in `tailwind.config.js`.
+- Use **font size classes** defined in `tailwind.config.js` (e.g., `text-display-lg`, `text-heading-md`, `text-body-sm`, etc.) for typography styling.
+
+### UI Components
+- If the design includes **common UI patterns**, check the `src/components/ui` directory.
+- **Reuse existing components** from `src/components/ui` wherever possible to maintain consistency.
+
+### Icons
+- Check if icons from the Figma design already exist in the `src/components/icons` folder.
+- If icons exist, import and use them from the icons index file (e.g., `import { GoogleIcon, MailIcon } from "@/components/icons";`).
+- If icons don't exist, download SVGs from Figma and add them to the `src/components/icons` folder, then run:
+  ```bash
+  node scripts/update-icons.js && node scripts/generate-icons.js
+  ```
+  - `update-icons.js`: normalizes SVGs (width/height → `1em`, single-color fill/stroke → `currentColor`)
+  - `generate-icons.js`: auto-generates `index.tsx` barrel exports from all `.svg` files
+- **DO NOT** manually edit `src/components/icons/index.tsx` — always use the script.
+- If icons can't be downloaded, create placeholder SVG files with appropriate names and run the scripts above.
+
+## Output
+
+- Generate a **single, reusable React component** based on the provided Figma link.
+- The component must be:
+  - **Cleanly structured**
+  - **Aligned with the design system** (fonts, colors, spacing)
+- Follow the existing **project folder conventions** (e.g., `components/[category]/[ComponentName].tsx`).

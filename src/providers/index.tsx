@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import "@rainbow-me/rainbowkit/styles.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 interface ProvidersProps {

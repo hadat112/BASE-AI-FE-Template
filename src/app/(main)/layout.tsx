@@ -1,18 +1,15 @@
 "use client";
 
 import { AlertFill, CheckCircle } from "@/components/icons";
-import Navbar from "@/components/layout/Navbar";
+import MainLayout from "@/components/layout/MainLayout";
 import { Toaster } from "sonner";
 
 const AppContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <div className="flex min-h-screen max-h-screen max-w-screen w-full overflow-hidden">
-        <Navbar />
-        <div className="flex-1 flex-col flex w-full overflow-y-auto">
-          {children}
-        </div>
-      </div>
+      <MainLayout>
+        {children}
+      </MainLayout>
       <Toaster
         position="top-center"
         toastOptions={{
